@@ -8,6 +8,7 @@ After installing the dt cli, create a folder with the name of your api and enter
 
 ```sh
 mkdir my-node-api
+cd my-node-api
 ```
 
 Then use this template through the cli:
