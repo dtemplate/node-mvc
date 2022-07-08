@@ -1,0 +1,25 @@
+name: Run test PR
+
+on:
+  pull_request:
+    types:
+      - 'opened'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Create .env file
+        run: |
+          printf "PORT=3001\nNODE_ENV=github\n" > .env
+      - name: Run start and build commands
+        run: |
+          yarn
+          yarn build
+          yarn test
+          yarn start

@@ -1,0 +1,5 @@
+{
+  "name": "node-mvc",
+  "description": "Generate a nodejs api using the mvc folder structure as a base",
+  "commands": ["yarn"]
+}
